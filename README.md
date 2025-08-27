@@ -1,18 +1,27 @@
-# Pharmaceutical Sales Forecast Dashboard
+# Pharmaceutical Sales Forecast Dashboard  
 
-## Description
+## Description  
+The **Pharmaceutical Sales Forecast Dashboard** is a Streamlit-based web application designed for forecasting pharmaceutical sales across multiple product categories. It integrates two forecasting techniques—**Prophet** (monthly) and **XGBoost** (weekly)—to provide accurate, interactive, and user-friendly sales insights. The dashboard supports detailed visualizations, performance metrics, and AI-generated explanations of forecast trends.  
 
-The Pharmaceutical Sales Forecast Dashboard is a Streamlit-based application that provides sales forecasting for various pharmaceutical product categories. The dashboard uses two forecasting methods: Prophet for monthly forecasts and XGBoost for weekly forecasts. It offers interactive visualizations, performance metrics, and AI-generated explanations of forecast trends.
+## Features  
+- **Dual Forecasting Methods**: Prophet (monthly) and XGBoost (weekly) forecasting models  
+- **Multiple Product Categories**: Supports 8 pharmaceutical categories (M01AB, M01AE, N02BA, N02BE, N05B, N05C, R03, R06)  
+- **Interactive Visualizations**: Charts displaying historical data and forecast projections  
+- **Performance Metrics**: Includes Accuracy, MAPE, RMSE, and R²  
+- **AI-Generated Explanations**: Automatic interpretation of forecast trends using Google’s Generative AI  
+- **Customizable Forecast Horizon**: Users can adjust the forecast period as needed  
+- **Data Export**: Download forecast results for further offline analysis  
 
-## Features
+## Screenshots  
 
-- **Dual Forecasting Methods**: Choose between Prophet (monthly) and XGBoost (weekly) forecasting models
-- **Multiple Medicine Categories**: Support for 8 different pharmaceutical categories (M01AB, M01AE, N02BA, N02BE, N05B, N05C, R03, R06)
-- **Interactive Visualizations**: Dynamic charts showing historical data and forecasts
-- **Performance Metrics**: Accuracy, MAPE, RMSE, and R² metrics for model evaluation
-- **AI-Generated Explanations**: Natural language explanations of forecast trends using Google's Generative AI
-- **Customizable Forecast Horizon**: Adjust the forecast period based on your needs
-- **Data Export**: Download forecast data for further analysis
+### Prophet Monthly Forecast  
+![Prophet Monthly](screenshots/Prophet-Dashboard.png)  
+
+### XGBoost Weekly Forecast  
+![XGBoost Weekly](screenshots/Xgboost-Dashboard.png)  
+
+### Dataset Updation  
+![Dataset Updation](screenshots/dataset-updation.png)  
 
 ## Installation
 
@@ -46,25 +55,14 @@ The Pharmaceutical Sales Forecast Dashboard is a Streamlit-based application tha
 3. Use the sidebar controls to:
    - Select the forecasting method (Prophet or XGBoost)
    - Choose a medicine category
-   - Set date ranges and forecast horizon
+   - Set date ranges and forecast horizons
+   - View and download forecast results
 
-## Forecasting Methods
+## Project Structure
 
-### Prophet (Monthly)
-- Facebook's Prophet model for time series forecasting
-- Works with monthly aggregated pharmaceutical sales data
-- Provides trend, seasonality, and holiday components
-- Best for medium to long-term forecasting with seasonal patterns
-
-### XGBoost (Weekly)
-- Gradient boosting model for time series forecasting
-- Works with weekly sales data for more granular predictions
-- Uses lagged features and calendar information
-- Best for short to medium-term forecasting with complex patterns
-
-## Data Requirements
-
-The application expects the following data files:
-- `monthly_dataset.csv`: Monthly sales data for Prophet models
-- `salesweekly_corrected_no_outliers.csv`: Weekly sales data for XGBoost models
-- Pre-trained models in the `Prophet_models` and `XgBoost_Model` directories
+- `app.py`: Main Streamlit application file
+- `Prophet_models/`: Directory to store trained Prophet models
+- `monthly_dataset.csv`: Input dataset for Prophet forecasts
+- `weekly_dataset.csv`: Input dataset for XGBoost forecasts
+- `requirements.txt`: Python dependencies
+- `README.md`: Project documentation
