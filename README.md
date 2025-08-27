@@ -26,7 +26,10 @@ The **Pharmaceutical Sales Forecast Dashboard** is a Streamlit-based web applica
 ## Installation
 
 1. Clone the repository or download the source code
-
+   ```bash
+   git clone https://github.com/vamsikeshwaran/CTS_NPN
+   ```
+   
 2. Create a virtual environment (recommended):
    ```bash
    python -m venv .venv
@@ -47,7 +50,7 @@ The **Pharmaceutical Sales Forecast Dashboard** is a Streamlit-based web applica
 
 1. Redirect to website folder
    ```bash
-      cd website
+   cd website
    ```
    
 2. Run the Streamlit application:
