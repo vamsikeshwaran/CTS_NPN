@@ -45,14 +45,19 @@ The **Pharmaceutical Sales Forecast Dashboard** is a Streamlit-based web applica
 
 ## Usage
 
-1. Run the Streamlit application:
+1. Redirect to website folder
+   ```bash
+      cd website
+   ```
+   
+2. Run the Streamlit application:
    ```bash
    streamlit run app.py
    ```
 
-2. Open your web browser and navigate to the provided local URL (typically http://localhost:8501)
+3. Open your web browser and navigate to the provided local URL (typically http://localhost:8501)
 
-3. Use the sidebar controls to:
+5. Use the sidebar controls to:
    - Select the forecasting method (Prophet or XGBoost)
    - Choose a medicine category
    - Set date ranges and forecast horizons
